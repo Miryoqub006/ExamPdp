@@ -1,0 +1,13 @@
+1-Genericlar 
+
+Genericlar Object keltirib chiqadigan muammolarni hal qilish uchun o'ylab topilgan. Bu degani oldin object bilan ishlanganda quyidagi muammolar bo'lgan bular boxing unboxing , type safetylar . Boxing unboxing muammosi shu ediki value typelardan referencega unboxing esa shuni teskarisi edi bu juda ko'p vaqt olgan va type safetylar ham har tiplar berilishi mumkinligi hisobiga bu xavfli bo'lgan. Mana shu muammolarni Generic hal qiladi. Bu .Netning yuragi bo'lgan CLR ichidagi JIt compiler Ichida amalgam oshadi ya'ni Generic (T) qanaqa type bolishini dastur runtime paytida aniqlab oladi va bu ishni JIT compiler bajaradi. Genericlarni biz classlar field propertylar va methodlarga berishimiz mumkin, class generic qilib ochganimizda bu generic qanaqa type olishi shartligini ham WHERE kalit so'zi orqali bersak bo'ladi (class Test<T> where :) bu yerda class bersak bu degani bizning generic type va reference type bo'lishi kerak agar Struck bersak Value type bo'lishi kerak yana qoshimcha biz classni ozini ham berishimiz mumkin faqat osha class Father class bolishi kerak va generic osha father classning bolalarini type sifatida ishlatib ketadi.
+
+
+2-.Net codelar machine codega otishi.
+
+Biz c# da kodni yozamiz bu odam tushunadigan tilda bo'ladi run berilgan keyin bizning kod IL(MSILL) kodgan intermediate language kodga o'tadi bu ishni maxsus Roslyn degan compiler amalgam oshadi (Rosyln C# va Vb da F# da boshqa edi F.exemi shunaqa) .Kodimiz IL kodga o'tgandan keyin yana boya aytganimdek .NET ning yuragi CLR ishga tushadi va yana osha JIT bizning IL kodni machine codega o'girib beradi. Bo'ldi shunaqa .
+
+
+3- Castinglar.
+
+Castinglar adashmasam ikki xil bo'ladi . Explicite va Implicite . Casting qilish agar biz Convert.To degan nomlanish bilan boshlanadi convert turini ishlatganimizda adashmasa bu Explicite deyiladi bu bizga menimcha value typelardan reference typelarga o'tish uchun ishlatiladi. ( ) orqali convert ishlatilinsa bu implicite buyam bir convertlash turi , bu bilan ham menimcha lyuboy convert turini qilsak bo'ladi ko'pincha object bilan ishlanganda shu ishlatiladi. TUGADI.
