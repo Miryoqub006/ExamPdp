@@ -26,12 +26,13 @@ public class QuestionController : Controller
 
     public void PostQuestion(Question question)
     {
-        return _questionRepository.AddQuestion(question);
+         _questionRepository.AddQuestion(question);
     }
 
 
 
 }
+
 
 
 
